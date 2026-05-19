@@ -73,13 +73,41 @@ If not, we will work through this together and I will explain things. But the ma
 *explanation*
 <sup>*will happen after the code*</sup>
 
-### Coding AI
+The main code is pretty self-explanatory, it is commented in the [main.py](https://github.com/mbubula6/llm-on-arduino/blob/main/main.py) file. However we have the library functions for setting up the LCD, I2C and displaying text on screen there (all labeled and in first few rows).
 
-Okay, so as You know, one has to have an API key to call the given LLM. Some companies are giving some tokens for free to have fun in personal project. When I first made an AI chatbot in C#, I used Groq (not to confuse with Grok) so I will use it here as well.
+## Coding AI
 
-You shall go to [groq.com](https://groq.com/) and log in, then go to API keys > create API key. That is pretty much it. Copy the key and best You can do is put it in the `.env` file in a telling variable (like `API_KEY = "..."`). DO NOT FORGET TO PUT .ENV IN .GITIGNORE. So yeah, if You don't know it yet, to make sure that your API key (and other private stuff) is not public on GitHub, You shall use `.gitignore` file and mention private stuff there e.g.:
+### Setup again?
+
+Okay, so as You know, one has to have an API key to call the given LLM. Some companies are giving some tokens for free to have fun in personal projects. When I first made an AI chatbot in C#, I used Groq (not to confuse with Grok) so I will use it here as well.
+
+You shall go to [groq.com](https://groq.com/) and log in, then go to API keys > create API key. That is pretty much it.
+
+Copy the key and best You can do is put it in the `.env` file in a telling variable (like `API_KEY = "..."`). DO NOT FORGET TO PUT .ENV IN .GITIGNORE. So yeah, if You don't know it yet, to make sure that your API key (and other private stuff) is not public on GitHub, You shall use `.gitignore` file and mention private stuff there e.g.:
 ```.env #.env file with secrecy will be ignored while pushing to GitHub```
 
+### Using the API key
+
+For Groq specifically, documentation for us this page: [Groq Quickstart](https://console.groq.com/docs/quickstart).
+
+But so far all we need is this:
+```from groq import Groq
+
+client = Groq(
+    api_key=os.environ.get("GROQ_API_KEY"),
+)
+
+chat_completion = client.chat.completions.create(
+    messages=[
+        {
+            "role": "user",
+            "content": "Explain the importance of fast language models",
+        }
+    ],
+    model="llama-3.3-70b-versatile",
+)```
+ 
+ Replace the GROQ_API_KEY with your key or with the name of the variable we created in the `.env` file (API_KEY) and then we work.
 
 
 
