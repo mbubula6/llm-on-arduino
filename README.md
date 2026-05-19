@@ -73,5 +73,14 @@ If not, we will work through this together and I will explain things. But the ma
 *explanation*
 <sup>*will happen after the code*</sup>
 
+### Coding AI
+
+Okay, so as You know, one has to have an API key to call the given LLM. Some companies are giving some tokens for free to have fun in personal project. When I first made an AI chatbot in C#, I used Groq (not to confuse with Grok) so I will use it here as well.
+
+You shall go to [groq.com](https://groq.com/) and log in, then go to API keys > create API key. That is pretty much it. Copy the key and best You can do is put it in the `.env` file in a telling variable (like `API_KEY = "..."`). DO NOT FORGET TO PUT .ENV IN .GITIGNORE. So yeah, if You don't know it yet, to make sure that your API key (and other private stuff) is not public on GitHub, You shall use `.gitignore` file and mention private stuff there e.g.:
+```.env #.env file with secrecy will be ignored while pushing to GitHub```
+
+
+
 
 Martyna Bubula github.com/mbubula6
