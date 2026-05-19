@@ -1,4 +1,4 @@
-# LLM on Arduino (technically)
+# LLM on Arduino
 
 This project's main idea is not to install a LLM on Arduino locally (my Arduino too small T-T) but to call the API and show communication on the 16x2 LCD I2C. I hadn't figured out yet how to comminicate with it rather than just display answers but we'll get there. (Maybe using a rotary encoder and a button? (I mean those I have))
 
@@ -84,6 +84,7 @@ Okay, so as You know, one has to have an API key to call the given LLM. Some com
 You shall go to [groq.com](https://groq.com/) and log in, then go to API keys > create API key. That is pretty much it.
 
 Copy the key and best You can do is put it in the `.env` file in a telling variable (like `API_KEY = "..."`). DO NOT FORGET TO PUT .ENV IN .GITIGNORE. So yeah, if You don't know it yet, to make sure that your API key (and other private stuff) is not public on GitHub, You shall use `.gitignore` file and mention private stuff there e.g.:
+
 ```.env #.env file with secrecy will be ignored while pushing to GitHub```
 
 ### Using the API key
