@@ -91,7 +91,8 @@ Copy the key and best You can do is put it in the `.env` file in a telling varia
 For Groq specifically, documentation for us this page: [Groq Quickstart](https://console.groq.com/docs/quickstart).
 
 But so far all we need is this:
-```from groq import Groq
+```
+from groq import Groq
 
 client = Groq(
     api_key=os.environ.get("GROQ_API_KEY"),
@@ -105,7 +106,8 @@ chat_completion = client.chat.completions.create(
         }
     ],
     model="llama-3.3-70b-versatile",
-)```
+)
+```
  
  Replace the GROQ_API_KEY with your key or with the name of the variable we created in the `.env` file (API_KEY) and then we work.
 
