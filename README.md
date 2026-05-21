@@ -1,5 +1,8 @@
 # LLM on Arduino
 
+## Quick info
+This project was originally made using MicroPython, however I realised that my board (Arduino UNO) does not possess enough RAM for a Python interpreter (2KB *skull_emoji*). So I transferred it to C++ in Arduino IDE. Python files are described here, while for current code look at READMECPP.md.
+
 This project's main idea is not to install a LLM on Arduino locally (my Arduino too small T-T) but to call the API and show communication on the 16x2 LCD I2C. I hadn't figured out yet how to comminicate with it rather than just display answers but we'll get there. (Maybe using a rotary encoder and a button? (I mean those I have))
 
 ## Introduction (tools)
@@ -20,7 +23,7 @@ Okay we need to start with installing MicroPython on da board. Again, a full tut
 
 1. Installing MicroPython on Arduino
 
-Open Arduino IDE, connect your board, install Giga Board Package on it (using Boards Manager).
+Open Arduino IDE, connect your board, install Giga Board Package on it (using Boards Manager). It is named: Arduino Mbed OS GIGA Boards.
 
 Get the [MicroPython installer](https://github.com/arduino/lab-micropython-installer/releases/tag/v1.4.0) for your operating system and run it while your board is connected.
 
@@ -70,10 +73,8 @@ And now we're done!
 If you know how to use it, go straight to code here.
 If not, we will work through this together and I will explain things. But the main problems are over.
 
-*explanation*
-<sup>*will happen after the code*</sup>
 
-The main code is pretty self-explanatory, it is commented in the [main.py](https://github.com/mbubula6/llm-on-arduino/blob/main/main.py) file. However we have the library functions for setting up the LCD, I2C and displaying text on screen there (all labeled and in first few rows).
+The code for using LCD is pretty self-explanatory, it is commented in the [main.py](https://github.com/mbubula6/llm-on-arduino/blob/main/main.py) file. However we have the library functions for setting up the LCD, I2C and displaying text on screen there (all labeled and in first few rows).
 
 ## Coding AI
 
