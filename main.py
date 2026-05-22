@@ -21,5 +21,29 @@ while True:
     lcd.set_cursor(0, 0)
     lcd.print("Hi!!!")
     lcd.set_cursor(0, 1)
-    lcd.print("There will be an AI")
+    lcd.print("There will be AI")
     utime.sleep(4)
+
+
+# API CODE
+
+import os
+from groq import Groq
+import dotenv
+
+dotenv.load_dotenv()
+
+client = Groq(
+    api_key=os.environ.get("GROQ_API_KEY"),
+)
+
+chat_completion = client.chat.completions.create(
+    messages=[
+        {
+            "role": "user",
+            "content": "Explain the importance of fast language models",
+        }
+    ],
+    model="llama-3.3-70b-versatile",
+)
+print(chat_completion.choices[0].message.content)
