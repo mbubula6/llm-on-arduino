@@ -3,6 +3,8 @@
 ## Quick info
 This project was originally made using MicroPython, however I realised that my board (Arduino UNO) does not possess enough RAM for a Python interpreter (2KB *skull_emoji*). So I transferred it to C++ in Arduino IDE. Python files are described here, while for current code look at READMECPP.md.
 
+---
+
 This project's main idea is not to install a LLM on Arduino locally (my Arduino too small T-T) but to call the API and show communication on the 16x2 LCD I2C. I hadn't figured out yet how to comminicate with it rather than just display answers but we'll get there. (Maybe using a rotary encoder and a button? (I mean those I have))
 
 ## Introduction (tools)
