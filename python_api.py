@@ -9,7 +9,7 @@ dotenv.load_dotenv()
 # --- KONFIGURACJA PORTU ---
 # Musisz wpisać port, pod którym widoczne jest Twoje Arduino Uno w systemie.
 # Sprawdź go w Arduino IDE (np. 'COM3' na Windowsie lub '/dev/ttyACM0' na Linux/Mac)
-PORT_ARDUINO = 'COM3' 
+PORT_ARDUINO = 'COM6' 
 
 try:
     arduino = serial.Serial(port=PORT_ARDUINO, baudrate=9600, timeout=1)
