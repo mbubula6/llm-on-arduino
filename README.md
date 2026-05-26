@@ -1,5 +1,7 @@
 # LLM on Arduino
 
+**Project shelved till I get a better micrcontroller**
+
 ## Quick info
 This project was originally made using MicroPython, however I realised that my board (Arduino UNO) does not possess enough RAM for a Python interpreter (2KB *skull_emoji*). So I transferred it to C++ in Arduino IDE. Python files are described here, while for current code look at READMECPP.md.
 
